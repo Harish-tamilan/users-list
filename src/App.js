@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Top from './Components/Top/Top';
 import Bottom from './Components/Bottom/Bottom';
 import { AppContainer } from './style';

@@ -35,7 +35,7 @@ const Right = () => {
       }
       setIsSubmit(false);
     }
-  }, [isSubmit]);
+  }, [isSubmit, isPhoneNumberValid, isCarChecked, isPrivacyChecked, isFirstNameValid, isLastNameValid]);
 
   const onSubmit = () => {
     console.log(salutation);
@@ -76,19 +76,19 @@ const Right = () => {
 
   const onFirstNameBlur = () => {
     let fname = firstNameRef.current.value + "";
-    if (fname.length == 0) setIsFirstNameValid(false);
+    if (fname.length === 0) setIsFirstNameValid(false);
     else setIsFirstNameValid(true);
   };
 
   const onLastNameBlur = () => {
     let lname = lastNameRef.current.value + "";
-    if (lname.length == 0) setIsLastNameValid(false);
+    if (lname.length === 0) setIsLastNameValid(false);
     else setIsLastNameValid(true);
   };
 
   const onPhoneBlur = () => {
     let phone = phoneNumberRef.current.value + "";
-    if (phone.length == 0 || phone.length != 10) setIsPhoneNumberValid(false);
+    if (phone.length === 0 || phone.length !== 10) setIsPhoneNumberValid(false);
     else setIsPhoneNumberValid(true);
   };
 
